@@ -79,7 +79,7 @@ The following AI models were tested:
 ✅ Circle grows, and the game zooms out (squares shrink accordingly).   
 🔄 Squares only spawn when one is consumed.   
 ✅ Ice-like movement works.   
-➡️ The resizing seems to "extends" from the up right so all previosu square are moved to the top right, but overall it's working.   
+➡️ The resizing seems to "extends" from the up right so all previous square are moved to the top right, but overall it's working.   
 
 ### **Copilot**
 ✅ Implementation align with what was asked.  
@@ -97,7 +97,7 @@ The following AI models were tested:
 | **Mistral**              | ✅              | 🔄 (Only on consumption) | ✅ | ❌ | ✅ (No crashes) |
 | **Gemini**               | ❌              | ✅             | ❌           | ❌           | ❌ |
 | **BlackboxAI**           | ✅              | 🔄 (Only on consumption) | ✅           | ✅           | ✅ |
-| **BlackboxAI**           | ✅              | 🔄 (Only on consumption) | ❌           | ❌ (in fact shrink the windows) | 🔄 (crash if the windows become too small) |
+| **Copilot**              | ✅              | 🔄 (Only on consumption) | ❌           | ❌ (in fact shrink the windows) | 🔄 (crash if the windows become too small) |
 
 ## Key Findings
 ### **Best Performers**
