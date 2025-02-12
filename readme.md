@@ -25,6 +25,7 @@ The following AI models were tested:
   - First Attempt: `Mistral_FirstPrompt.py`
   - Second Attempt: `Mistral_SecondPrompt.py`
 - **Gemini** ([gemini.google.com](https://gemini.google.com/app)) - `gemini.py`
+- **Blackbox AI** ([blackbox.ai](https://www.blackbox.ai/chat/)) - `BlackboxAI.py`
 
 ## AI Model Test Results
 ### **ChatGPT-4o**
@@ -60,7 +61,7 @@ The following AI models were tested:
 
 #### Second Attempt (Fixed Line 81 Error)
 ✅ Circle movement is very fast.  
-✅ Squares spawn randomly when previous ones are consumed.  
+❌ Squares only spawn when one is consumed.   
 ✅ Ice-like movement works.  
 ❌ No resizing occurs.  
 ✅ Squares do not spawn under the circle (prevents crashes).  
@@ -72,6 +73,13 @@ The following AI models were tested:
 ❌ No resizing feature.  
 ❌ Unclear if squares are being consumed.  
 
+### **Blackbox AI**
+✅ Implementation align with what was asked.  
+✅ Circle grows, and the game zooms out (squares shrink accordingly).  
+✅ Square spawn randomly.
+✅ Ice-like movement works.
+➡️ The resizing seems to "extends" from the up right so all previosu square are moved to the top right, but overall it's working.
+
 ## Performance Comparison
 | Model                     | Ice-Like Movement | Square Spawning | Circle Growth | Screen Resize | Stability |
 |--------------------------|-----------------|----------------|---------------|---------------|------------|
@@ -81,12 +89,13 @@ The following AI models were tested:
 | **Deepseek (DeepThink)** | ✅              | ❌             | ❌           | ❌           | ❌ (Unplayable) |
 | **Mistral**              | ✅              | 🔄 (Only on consumption) | ✅ | ❌ | ✅ (No crashes) |
 | **Gemini**               | ❌              | ✅             | ❌           | ❌           | ❌ |
+| **BlackboxAI**           | ✅              | ✅             | ✅           | ✅           | ✅ |
 
 ## Key Findings
 ### **Best Performers**
-1. **Mistral (Second Attempt)** - The most stable model, delivering functional movement, proper spawning, and no crashes. However, resizing was missing.
-2. **ChatGPT-4o** - Implemented physics well but crashed due to faulty spawn placement.
-3. **Deepseek** - Attempted zoom-out functionality but had severe interaction issues.
+1. **Blackbox** - Game worked, did what was asked too, no crashes, good resizing, good movement, good scores, Overall, in just 1 prompt, made the game working.
+2. **Mistral (Second Attempt)** - The second most stable model, delivering functional movement, proper spawning, and no crashes. However, resizing was missing.
+3. **ChatGPT-4o** - Implemented physics well but crashed due to faulty spawn placement.
 
 ### **Worst Performers**
 - **Deepseek (DeepThink Mode)** - Produced a completely broken game that was unplayable.
@@ -95,3 +104,4 @@ The following AI models were tested:
 ## Conclusion
 This case study highlights the strengths and weaknesses of various AI models in generating interactive Python-based games. While some models demonstrated better code stability and game mechanics, others struggled with core functionalities, highlighting the current limitations in AI-generated programming.
 
+NOTE : The game generated are from a single prompt, in 1 chats, if you try the same prompt you may have different code, working better or not. This study is just a simple test, based on 1 prompt on 1 chat.
