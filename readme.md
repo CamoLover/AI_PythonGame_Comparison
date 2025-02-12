@@ -25,12 +25,13 @@ The following AI models were tested:
   - First Attempt: `Mistral_FirstPrompt.py`
   - Second Attempt: `Mistral_SecondPrompt.py`
 - **Gemini** ([gemini.google.com](https://gemini.google.com/app)) - `gemini.py`
-- **Blackbox AI** ([blackbox.ai](https://www.blackbox.ai/chat/)) - `BlackboxAI.py`
+- **Blackbox AI** ([blackbox.ai](https://www.blackbox.ai/)) - `BlackboxAI.py`
+- **Copilot** ([copilot.microsoft.com](https://copilot.microsoft.com/)) - `copilot.py`
 
 ## AI Model Test Results
 ### **ChatGPT-4o**
 ✅ Implemented ice-like movement correctly.  
-❌ Squares only spawn when one is consumed.  
+🔄 Squares only spawn when one is consumed.  
 ❌ Screen does not resize when the circle grows.  
 ❌ Game crashes when squares spawn inside the circle.  
 
@@ -61,7 +62,7 @@ The following AI models were tested:
 
 #### Second Attempt (Fixed Line 81 Error)
 ✅ Circle movement is very fast.  
-❌ Squares only spawn when one is consumed.   
+🔄 Squares only spawn when one is consumed.   
 ✅ Ice-like movement works.  
 ❌ No resizing occurs.  
 ✅ Squares do not spawn under the circle (prevents crashes).  
@@ -76,9 +77,15 @@ The following AI models were tested:
 ### **Blackbox AI**
 ✅ Implementation align with what was asked.  
 ✅ Circle grows, and the game zooms out (squares shrink accordingly).   
-✅ Square spawn randomly.   
+🔄 Squares only spawn when one is consumed.   
 ✅ Ice-like movement works.   
 ➡️ The resizing seems to "extends" from the up right so all previosu square are moved to the top right, but overall it's working.   
+
+### **Copilot**
+✅ Implementation align with what was asked.  
+✅ Circle doesn't grow, in fact, the square shrink, but also the game windows.
+🔄 Squares only spawn when one is consumed.   
+✅ Ice-like movement works. And the circle also bounce of the wall, not asked but pretty fun.   
 
 ## Performance Comparison
 | Model                     | Ice-Like Movement | Square Spawning | Circle Growth | Screen Resize | Stability |
@@ -89,7 +96,8 @@ The following AI models were tested:
 | **Deepseek (DeepThink)** | ✅              | ❌             | ❌           | ❌           | ❌ (Unplayable) |
 | **Mistral**              | ✅              | 🔄 (Only on consumption) | ✅ | ❌ | ✅ (No crashes) |
 | **Gemini**               | ❌              | ✅             | ❌           | ❌           | ❌ |
-| **BlackboxAI**           | ✅              | ✅             | ✅           | ✅           | ✅ |
+| **BlackboxAI**           | ✅              | 🔄 (Only on consumption) | ✅           | ✅           | ✅ |
+| **BlackboxAI**           | ✅              | 🔄 (Only on consumption) | ❌           | ❌ (in fact shrink the windows) | 🔄 (crash if the windows become too small) |
 
 ## Key Findings
 ### **Best Performers**
