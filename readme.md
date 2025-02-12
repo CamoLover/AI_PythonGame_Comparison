@@ -75,10 +75,10 @@ The following AI models were tested:
 
 ### **Blackbox AI**
 ✅ Implementation align with what was asked.  
-✅ Circle grows, and the game zooms out (squares shrink accordingly).  
-✅ Square spawn randomly.
-✅ Ice-like movement works.
-➡️ The resizing seems to "extends" from the up right so all previosu square are moved to the top right, but overall it's working.
+✅ Circle grows, and the game zooms out (squares shrink accordingly).   
+✅ Square spawn randomly.   
+✅ Ice-like movement works.   
+➡️ The resizing seems to "extends" from the up right so all previosu square are moved to the top right, but overall it's working.   
 
 ## Performance Comparison
 | Model                     | Ice-Like Movement | Square Spawning | Circle Growth | Screen Resize | Stability |
